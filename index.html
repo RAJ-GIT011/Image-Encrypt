@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Encrypt & Decrypt Image</h2>
+
+        <h3>Encrypt Image</h3>
+        <input type="file" id="imageInput">
+        <input type="text" id="messageInput" placeholder="Enter secret message">
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="encryptImage()">Encrypt & Download</button>
+        
+        <br><br>
+
+        <h3>Decrypt Image</h3>
+        <input type="file" id="decryptImageInput">
+        <input type="password" id="decryptPassword" placeholder="Enter password">
+        <button onclick="decryptImage()">Extract Hidden Message</button>
+        
+        <p id="decryptedMessage"></p>
+    </div>
+    <p id="decryptedMessage" style="display: none; font-size: 18px; font-weight: bold; color: green;"></p>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
